@@ -38,6 +38,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "6f6e54ae-b7e8-4be5-91ac-ddf23a1c0848",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Arrows",
                     "id": "edb92e3a-af4a-43a9-b150-be35b60f363c",
                     "path": "2DVector",
@@ -91,6 +102,61 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "WASD",
+                    "id": "4fa99276-7d12-4dfc-9189-321c38cf553d",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "b81cf13b-009f-4760-aba4-5242d9444352",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "c6b7defb-ccc7-4c0e-b90d-4abdd6f7c8ee",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "11be2773-d496-4696-99ed-3a257f2c1513",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "3a708e7d-f5a4-4e02-bd3f-9f9d780b3496",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -99,9 +165,18 @@
             "id": "859790c2-e08b-4e07-b02e-cf592191654f",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Exit",
                     "type": "Button",
                     "id": "3aab717e-ada1-46e7-8e55-d0b429b14d7b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "78436b3d-1edb-4945-8c62-cdc8fe59fb75",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -112,11 +187,33 @@
                 {
                     "name": "",
                     "id": "f465dfa5-bda3-4532-9fd2-c86815b15335",
-                    "path": "",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "38ab153d-46f2-4dac-8ee4-01b994a76e9b",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cb01acb1-9e14-434d-9951-c05165f218ef",
+                    "path": "<Keyboard>/numpadEnter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

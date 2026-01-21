@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static WinCon;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,5 +32,21 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Exit");
         Application.Quit();
+    }
+    private void OnEnable()
+    {
+        WinCon.Winner += OnWin;
+    }
+    private void OnDisable()
+    {
+        WinCon.Winner -= OnWin;
+    }
+
+    private void OnWin(bool win)
+    {
+        if (win)
+        {
+            SceneManager.LoadScene(sceneName: "Ending");
+        }
     }
 }
