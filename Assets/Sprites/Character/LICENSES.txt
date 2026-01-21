@@ -1,0 +1,20 @@
+###############################################################################
+
+
+	Pixel Adventure
+	by Pixel Frog https://x.com/PixelFrogStudio
+
+			------------------------------
+
+	License (Creative Commons Zero, CC0)
+	http://creativecommons.org/publicdomain/zero/1.0/
+
+	You can distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes.
+	Attribution is not required.
+
+			------------------------------
+
+	
+
+
+###############################################################################	
