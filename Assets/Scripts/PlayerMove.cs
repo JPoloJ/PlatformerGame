@@ -39,9 +39,12 @@ public class PlayerMove : MonoBehaviour
         velocity.x = moveX * Speed;
         _rigidbody.linearVelocity = velocity;
 
+        bool grounded = GetComponent<PlayerJump>().isGrounded;
+        _animator.SetBool("IsOnWall", IsTouchingWall() && !grounded);
+
         _animator.SetFloat("Speed", Mathf.Abs(moveX));
     }
-    private bool IsTouchingWall()
+    public bool IsTouchingWall()
     {
         bool topTouch = Physics2D.OverlapCircle(topWallCheck.position, checkRadius, wallLayer);
         bool bottomTouch = Physics2D.OverlapCircle(bottomWallCheck.position, checkRadius, wallLayer);
