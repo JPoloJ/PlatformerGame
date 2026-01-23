@@ -1117,7 +1117,8 @@ Transform:
   m_LocalPosition: {x: 0.92321, y: -2.95011, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8760625721755032803}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1097494675
@@ -1439,6 +1440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpForce
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160106601001213981, guid: bd31338c0f748ce46b8ba6e20fbf3dbc,
+        type: 3}
+      propertyPath: wallSlidingSpeed
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1895,7 +1901,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1054705959}
     m_Modifications:
     - target: {fileID: 4320070976207102987, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
@@ -1905,12 +1911,12 @@ PrefabInstance:
     - target: {fileID: 4360873596911741492, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.711
+      value: 2.7877898
       objectReference: {fileID: 0}
     - target: {fileID: 4360873596911741492, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.347
+      value: 3.29711
       objectReference: {fileID: 0}
     - target: {fileID: 4360873596911741492, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
@@ -1957,6 +1963,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf3a142302595a49b0071876e972a02, type: 3}
+--- !u!4 &8760625721755032803 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4360873596911741492, guid: 4cf3a142302595a49b0071876e972a02,
+    type: 3}
+  m_PrefabInstance: {fileID: 8760625721755032802}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1973,6 +1985,5 @@ SceneRoots:
   - {fileID: 54434948}
   - {fileID: 408364146}
   - {fileID: 492283106}
-  - {fileID: 8760625721755032802}
   - {fileID: 1260911881}
   - {fileID: 564025224}
