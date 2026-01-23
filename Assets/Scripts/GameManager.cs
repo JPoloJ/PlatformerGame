@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static WinCon;
+using static LoseCon;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,36 +18,52 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         //End of Singleton
     }
-    public void OnGoTitle()
+    public int finalScore;
+    public void OnStart()
     {
         if (SceneManager.GetActiveScene().name == "Title")
         {
-            SceneManager.LoadScene(sceneName: "Gameplay");
+            finalScore = 0;
+            SceneManager.LoadScene("Gameplay");
         }
-        else
+        else if (SceneManager.GetActiveScene().name == "Ending")
         {
-            SceneManager.LoadScene(sceneName: "Title");
+            SceneManager.LoadScene("Title");
         }
     }
     public void OnExit()
     {
-        Debug.Log("Exit");
+        Debug.Log("Exited");
         Application.Quit();
     }
     private void OnEnable()
     {
         WinCon.Winner += OnWin;
+        LoseCon.Loser += OnLose;
+        ScoreSystem.OnScoreUpdated += SaveFinalScore;
     }
     private void OnDisable()
     {
         WinCon.Winner -= OnWin;
+        LoseCon.Loser -= OnLose;
+        ScoreSystem.OnScoreUpdated -= SaveFinalScore;
     }
-
     private void OnWin(bool win)
     {
         if (win)
         {
             SceneManager.LoadScene(sceneName: "Ending");
         }
+    }
+    private void OnLose(bool lose)
+    {
+        if (lose)
+        {
+            SceneManager.LoadScene(sceneName: "Ending");
+        }
+    }
+    private void SaveFinalScore(int score)
+    {
+        finalScore = score;
     }
 }

@@ -1,7 +1,5 @@
 using UnityEngine;
 
-using UnityEngine;
-
 public class PlayerJump : MonoBehaviour
 {
     public bool isGrounded = false;
