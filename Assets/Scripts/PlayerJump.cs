@@ -9,10 +9,7 @@ public class PlayerJump : MonoBehaviour
     public float jumpForce = 4f;
 
     public float wallSlidingSpeed = 0.5f;
-    public float wallJumpForceX = 5f;
-    public float wallJumpForceY = 4f;
     public float wallJumpDuration = 0.2f;
-    private bool isWallJumping = false;
 
     public BoxCollider2D groundCol;
 
@@ -95,17 +92,19 @@ public class PlayerJump : MonoBehaviour
 
     private IEnumerator PerformWallJump()
     {
-        isWallJumping = true;
         jumpsToDo = maxJumps - 1;
 
         float direction = -Mathf.Sign(transform.Find("TopWallCheck").localPosition.x);
 
-        _rigidbody.linearVelocity = new Vector2(direction * wallJumpForceX, wallJumpForceY);
+        
+        _rigidbody.linearVelocity = new Vector2(
+            _rigidbody.linearVelocity.x,
+            jumpForce
+        );
 
 
         yield return new WaitForSeconds(wallJumpDuration);
 
-        isWallJumping = false;
     }
 
     private bool IsOnWall()
