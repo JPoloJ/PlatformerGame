@@ -12,7 +12,7 @@ public class PowerUp : MonoBehaviour
             if (playerJump != null)
             {
                 
-                playerJump.PowerUpBoost(2);
+                playerJump.PowerUpBoost(2   );
                 Destroy(gameObject);
 
             }

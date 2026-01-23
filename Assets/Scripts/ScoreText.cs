@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Text))]
 public class ScoreText : MonoBehaviour
@@ -13,7 +11,16 @@ public class ScoreText : MonoBehaviour
     {
         label = GetComponent<Text>();
     }
-
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Ending")
+        {
+            if (GameManager.Instance != null)
+            {
+                label.text = "The END!\nFinal Score: " + GameManager.Instance.finalScore; 
+            }
+        }
+    }
     private void OnEnable()
     {
         ScoreSystem.OnScoreUpdated += UpdateScoreText;
