@@ -3,7 +3,7 @@ using TMPro;
 
 public class BlinkingText_TMP : MonoBehaviour
 {
-    [SerializeField] private float blinkSpeed = 0.5f;
+    [SerializeField] private float blinkSpeed = 1f;
     [SerializeField] private bool startBlinking = true;
 
     private TextMeshProUGUI textComponent;
