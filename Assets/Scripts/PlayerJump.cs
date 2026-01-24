@@ -13,6 +13,11 @@ public class PlayerJump : MonoBehaviour
 
     public BoxCollider2D groundCol;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField][Range(0f, 1f)] private float jumpVolume = 0.5f;
+
+    AudioSource audioSource;
     Rigidbody2D _rigidbody;
     Animator _animator;
     PlayerMove _playerMove;
@@ -22,7 +27,31 @@ public class PlayerJump : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _playerMove = GetComponent<PlayerMove>();
+
+        SetupAudio();
     }
+
+    private void SetupAudio()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
+        audioSource.volume = jumpVolume;
+        audioSource.spatialBlend = 0f;
+    }
+
+    private void PlayJumpSound()
+    {
+        if (audioSource != null && jumpSound != null)
+        {
+            audioSource.PlayOneShot(jumpSound);
+        }
+    }
+
     void FixedUpdate()
     {
         if (IsOnWall() && !isGrounded && _rigidbody.linearVelocity.y < 0)
@@ -64,6 +93,8 @@ public class PlayerJump : MonoBehaviour
             _rigidbody.linearVelocity.x,
             jumpForce
         );
+
+        PlayJumpSound();
 
         if (isDoubleJump)
         {
