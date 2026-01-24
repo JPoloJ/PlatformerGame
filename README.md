@@ -39,6 +39,10 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
 This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for further details.
 
+All sound effects obtained from Pixabay
+Website: https://pixabay.com/sound-effects/
+License: Pixabay License (https://pixabay.com/service/license/)
+
 $(Additional Licenses)
 
 *Copyright (c) $(Year) $(Developers Names)*
