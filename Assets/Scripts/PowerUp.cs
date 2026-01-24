@@ -11,10 +11,8 @@ public class PowerUp : MonoBehaviour
             PlayerJump playerJump = collision.GetComponent<PlayerJump>();
             if (playerJump != null)
             {
-                
-                playerJump.PowerUpBoost(2   );
+                playerJump.PowerUpBoost(1.5f);
                 Destroy(gameObject);
-
             }
         }
     }
