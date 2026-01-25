@@ -22,6 +22,11 @@ public class PlayerJump : MonoBehaviour
     Animator _animator;
     PlayerMove _playerMove;
 
+    private bool wasGroundedLastFrame = false;
+
+    private bool justFellOffGround = false;
+
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -52,6 +57,24 @@ public class PlayerJump : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (!isGrounded && wasGroundedLastFrame)
+        {
+            justFellOffGround = true;
+            jumpsToDo = 1;
+            Debug.Log("Fell off - jumpsToDo set to 1");
+        }
+
+        if (isGrounded && !wasGroundedLastFrame)
+        {
+            jumpsToDo = maxJumps;
+            justFellOffGround = false;
+        }
+
+        wasGroundedLastFrame = isGrounded;
+    }
+
     void FixedUpdate()
     {
         if (IsOnWall() && !isGrounded && _rigidbody.linearVelocity.y < 0)
@@ -65,7 +88,6 @@ public class PlayerJump : MonoBehaviour
         {
             isGrounded = true;
             _animator.SetBool("IsGrounded", true);
-            jumpsToDo = maxJumps;
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall") && !isGrounded)
         {
