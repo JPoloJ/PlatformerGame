@@ -8207,6 +8207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9160106601001213981, guid: bd31338c0f748ce46b8ba6e20fbf3dbc,
         type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 899d0f7f241b3f44b99c12d3b5f9a0d2, type: 3}
+    - target: {fileID: 9160106601001213981, guid: bd31338c0f748ce46b8ba6e20fbf3dbc,
+        type: 3}
       propertyPath: wallSlidingSpeed
       value: 0.3
       objectReference: {fileID: 0}
