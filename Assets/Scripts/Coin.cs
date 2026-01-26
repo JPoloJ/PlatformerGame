@@ -13,16 +13,43 @@ public class Coin : MonoBehaviour
     private Collider2D _collider;
     private bool _hasBeenCollected = false;
 
+    [SerializeField] private AudioClip coinPicked;
+    [SerializeField][Range(0f, 1f)] private float coinPickedVolume = 0.5f;
+
+    AudioSource audioSource;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _collider = GetComponent<Collider2D>();
+
+        SetupAudio();
+    }
+    private void SetupAudio()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
+        audioSource.volume = coinPickedVolume;
+        audioSource.spatialBlend = 0f;
+    }
+    private void PlaySound()
+    {
+        if (audioSource != null && coinPicked != null)
+        {
+            audioSource.PlayOneShot(coinPicked);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !_hasBeenCollected)
         {
             _hasBeenCollected = true;
+            PlaySound();
             StartCoroutine(CollectSequence());
         }
     }
