@@ -6,7 +6,6 @@ public class Coin : MonoBehaviour
 {
     public int Value = 5;
 
-
     public static Action<Coin> OnCoinCollected;
 
     private Animator _animator;

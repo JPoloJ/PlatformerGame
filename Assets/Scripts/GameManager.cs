@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        //Singleton setUp
+        // Singleton setUp
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        //End of Singleton
+        // End of Singleton
     }
 
     private void Update()

@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class BlinkingText_TMP : MonoBehaviour
+public class BlinkingTextTMP : MonoBehaviour
 {
     [SerializeField] private float blinkSpeed = 1f;
     [SerializeField] private bool startBlinking = true;

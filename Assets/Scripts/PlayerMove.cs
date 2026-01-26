@@ -51,11 +51,9 @@ public class PlayerMove : MonoBehaviour
 
         return topTouch || bottomTouch;
     }
-    // NOTE: InputSystem: "move" action becomes "OnMove" method
+    
     void OnMove(InputValue value)
     {
-        // Read value from control, the type depends on what
-        // type of controls the action is bound to
         var inputVal = value.Get<Vector2>();
         _horizontalDir = inputVal.x;
         FlipSprite();

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
-public class ScoreText_TMP: MonoBehaviour
+public class ScoreTextTMP: MonoBehaviour
 {
     private TextMeshProUGUI label;
 
