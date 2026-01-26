@@ -639,22 +639,22 @@ PrefabInstance:
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.8733368
+      value: 0.7566933
       objectReference: {fileID: 0}
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.08245207
+      value: 0.06735833
       objectReference: {fileID: 0}
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.004543364
+      value: 0.015222102
       objectReference: {fileID: 0}
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.03877396
+      value: -0.046320833
       objectReference: {fileID: 0}
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
@@ -664,7 +664,7 @@ PrefabInstance:
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.87742466
+      value: 0.79342306
       objectReference: {fileID: 0}
     - target: {fileID: 4320070976207102987, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
@@ -674,7 +674,7 @@ PrefabInstance:
     - target: {fileID: 4360873596911741492, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7354
+      value: -0.7259
       objectReference: {fileID: 0}
     - target: {fileID: 4360873596911741492, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
@@ -724,7 +724,7 @@ PrefabInstance:
     - target: {fileID: 5933338569687689539, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7744401
+      value: 0.79342306
       objectReference: {fileID: 0}
     - target: {fileID: 5933338569687689539, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
@@ -5392,8 +5392,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678290961745446654, guid: 5b4870b7db0cfb7479f039eec1f52d96,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0477
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678290961745446654, guid: 5b4870b7db0cfb7479f039eec1f52d96,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2044
+      value: 0.2006
       objectReference: {fileID: 0}
     - target: {fileID: 8678290961745446654, guid: 5b4870b7db0cfb7479f039eec1f52d96,
         type: 3}
@@ -11435,22 +11440,22 @@ PrefabInstance:
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.7815201
+      value: 0.6737069
       objectReference: {fileID: 0}
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.08245207
+      value: 0.05657704
       objectReference: {fileID: 0}
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.0010826588
+      value: 0.0010825992
       objectReference: {fileID: 0}
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.03877396
+      value: -0.051711477
       objectReference: {fileID: 0}
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
@@ -11460,7 +11465,7 @@ PrefabInstance:
     - target: {fileID: 3008281376533961904, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.77590346
+      value: 0.70873964
       objectReference: {fileID: 0}
     - target: {fileID: 4320070976207102987, guid: 4cf3a142302595a49b0071876e972a02,
         type: 3}
