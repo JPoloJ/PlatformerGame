@@ -44,6 +44,7 @@ public class PlayerMove : MonoBehaviour
 
         _animator.SetFloat("Speed", Mathf.Abs(moveX));
     }
+
     public bool IsTouchingWall()
     {
         bool topTouch = Physics2D.OverlapCircle(topWallCheck.position, checkRadius, wallLayer);
@@ -58,6 +59,7 @@ public class PlayerMove : MonoBehaviour
         _horizontalDir = inputVal.x;
         FlipSprite();
     }
+
     private void FlipSprite()
     {
         if (_horizontalDir > 0)
@@ -71,12 +73,12 @@ public class PlayerMove : MonoBehaviour
             UpdateCheckPositions(-Mathf.Abs(topWallCheck.localPosition.x));
         }
     }
+
     private void UpdateCheckPositions(float xPos)
     {
         topWallCheck.localPosition = new Vector3(xPos, topWallCheck.localPosition.y, 0);
         bottomWallCheck.localPosition = new Vector3(xPos, bottomWallCheck.localPosition.y, 0);
     }
-
 
     private void OnDrawGizmos()
     {

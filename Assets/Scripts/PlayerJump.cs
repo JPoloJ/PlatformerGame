@@ -24,9 +24,6 @@ public class PlayerJump : MonoBehaviour
 
     private bool wasGroundedLastFrame = false;
 
-    private bool justFellOffGround = false;
-
-
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -61,15 +58,12 @@ public class PlayerJump : MonoBehaviour
     {
         if (!isGrounded && wasGroundedLastFrame)
         {
-            justFellOffGround = true;
             jumpsToDo = 1;
-            Debug.Log("Fell off - jumpsToDo set to 1");
         }
 
         if (isGrounded && !wasGroundedLastFrame)
         {
             jumpsToDo = maxJumps;
-            justFellOffGround = false;
         }
 
         wasGroundedLastFrame = isGrounded;
@@ -82,6 +76,7 @@ public class PlayerJump : MonoBehaviour
             _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x, -wallSlidingSpeed);
         }
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Ground"))
@@ -116,7 +111,6 @@ public class PlayerJump : MonoBehaviour
             jumpForce
         );
 
-        PlayJumpSound();
 
         if (isDoubleJump)
         {
@@ -129,15 +123,18 @@ public class PlayerJump : MonoBehaviour
         
         if (isGrounded)
         {
+            PlayJumpSound();
             jumpsToDo--;
             Jump(false);
         }
         else if (IsOnWall())
         {
+            PlayJumpSound();
             StartCoroutine(PerformWallJump());
         }
         else if (jumpsToDo > 0)
         {
+            PlayJumpSound();
             jumpsToDo--;
             Jump(true);
         }

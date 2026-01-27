@@ -8,7 +8,6 @@ public class BlinkingTextTMP : MonoBehaviour
 
     private TextMeshProUGUI textComponent;
     private float timer;
-
     void Start()
     {
         textComponent = GetComponent<TextMeshProUGUI>();

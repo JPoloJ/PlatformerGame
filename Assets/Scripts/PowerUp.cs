@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class PowerUp : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class PowerUp : MonoBehaviour
             _hasBeenCollected = true;
             PlayerJump playerJump = collision.GetComponent<PlayerJump>();
 
-            if (playerJump != null/* && playerJump.jumpForce <= 4.1f*/)
+            if (playerJump != null)
             {
                 playerJump.PowerUpBoost(multiplier);
             }

@@ -24,6 +24,7 @@ public class Coin : MonoBehaviour
 
         SetupAudio();
     }
+
     private void SetupAudio()
     {
         audioSource = GetComponent<AudioSource>();
@@ -36,6 +37,7 @@ public class Coin : MonoBehaviour
         audioSource.volume = coinPickedVolume;
         audioSource.spatialBlend = 0f;
     }
+
     private void PlaySound()
     {
         if (audioSource != null && coinPicked != null)
@@ -43,6 +45,7 @@ public class Coin : MonoBehaviour
             audioSource.PlayOneShot(coinPicked);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !_hasBeenCollected)
@@ -52,6 +55,7 @@ public class Coin : MonoBehaviour
             StartCoroutine(CollectSequence());
         }
     }
+
     private IEnumerator CollectSequence()
     {
         OnCoinCollected?.Invoke(this);

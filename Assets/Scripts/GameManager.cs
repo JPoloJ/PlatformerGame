@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Exited");
         Application.Quit();
     }
+
     private void OnEnable()
     {
         WinCon.Winner += OnWin;
@@ -101,6 +102,7 @@ public class GameManager : MonoBehaviour
         LoseCon.Loser -= OnLose;
         ScoreSystem.OnScoreUpdated -= SaveFinalScore;
     }
+
     private void OnWin(bool win)
     {
         if (win)
@@ -108,6 +110,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(sceneName: "Ending");
         }
     }
+
     private void OnLose(bool lose)
     {
         if (lose)
@@ -115,6 +118,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(sceneName: "Ending");
         }
     }
+
     private void SaveFinalScore(int score)
     {
         finalScore = score;
