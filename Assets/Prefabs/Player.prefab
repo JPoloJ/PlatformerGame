@@ -287,7 +287,11 @@ MonoBehaviour:
   jumpsToDo: 0
   maxJumps: 2
   jumpForce: 4.5
+  wallSlidingSpeed: 0.5
+  wallJumpDuration: 0.2
   groundCol: {fileID: 3575406965961156892}
+  jumpSound: {fileID: 0}
+  jumpVolume: 0.5
 --- !u!95 &6405708961603504767
 Animator:
   serializedVersion: 7
@@ -298,7 +302,7 @@ Animator:
   m_GameObject: {fileID: 205934993357219707}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3ed96b0fee16013469db2fe051abd715, type: 2}
+  m_Controller: {fileID: 9100000, guid: e09e2bf1c613b2f478df4ffb35104bfd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

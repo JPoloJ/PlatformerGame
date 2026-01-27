@@ -25,3 +25,11 @@
 		3. This notice may not be removed or altered from any source distribution.
 
 ###############################################################################	
+
+This game sources are licensed under MIT license.
+
+Sound effects obtained from Pixabay
+Website: https://pixabay.com/sound-effects/
+License: Pixabay License (https://pixabay.com/service/license/)
+
+###############################################################################	
