@@ -6799,9 +6799,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 639099364389493255, guid: d97f1c1efa43fe24fb90f65773c96ea6,
         type: 3}
+      propertyPath: coinPicked
+      value: 
+      objectReference: {fileID: 8300000, guid: 49508ff4123a5ce4383eb20324de7479, type: 3}
+    - target: {fileID: 639099364389493255, guid: d97f1c1efa43fe24fb90f65773c96ea6,
+        type: 3}
       propertyPath: multiplier
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 639099364389493255, guid: d97f1c1efa43fe24fb90f65773c96ea6,
+        type: 3}
+      propertyPath: PowerUpPicked
+      value: 
+      objectReference: {fileID: 8300000, guid: 49508ff4123a5ce4383eb20324de7479, type: 3}
     - target: {fileID: 8028883417831862582, guid: d97f1c1efa43fe24fb90f65773c96ea6,
         type: 3}
       propertyPath: m_Name
