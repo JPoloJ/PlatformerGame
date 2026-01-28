@@ -209,7 +209,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 3.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1286709493
 GameObject:
@@ -359,9 +359,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1286709493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab9d37531c7e6ca42a231bd12f5250ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c329634e84277c48a396d856b1484c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreText_TMP
+  blinkSpeed: 1
+  startBlinking: 1
 --- !u!114 &1286709498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,11 +373,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1286709493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e95878f01766374bae6e8b18d6f651e, type: 3}
+  m_Script: {fileID: 11500000, guid: 16423d94de1a8cd40b1bcd84b28055df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlinkingText_TMP
-  blinkSpeed: 1
-  startBlinking: 1
 --- !u!1 &1323530968
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 3.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1562998486
 GameObject:

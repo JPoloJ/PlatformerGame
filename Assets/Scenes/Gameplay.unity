@@ -6953,7 +6953,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1256557215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab9d37531c7e6ca42a231bd12f5250ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 16423d94de1a8cd40b1bcd84b28055df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreText_TMP
 --- !u!114 &1256557218
